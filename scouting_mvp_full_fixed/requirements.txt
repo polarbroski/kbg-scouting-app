@@ -1,6 +1,4 @@
 flask
-langchain
-openai
-faiss-cpu
 jinja2
 python-dotenv
+faiss-cpu
