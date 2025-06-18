@@ -13,10 +13,14 @@ def index():
         left_handed = request.form["left_handed"]
         pop_time = request.form.get("pop_time", "")
 
-        # 더미 문서 기반 무작위 샘플 리포트 이미지 반환
+        # 무작위 샘플 이미지 파일명 선택
         summary_filename = generate_summary_from_docs(name, [])
 
-        # sample_reports 폴더 내 파일로 렌더링
         return render_template("result.html", report_img=summary_filename)
 
     return render_template("index.html")
+
+
+# ✅ Render용 entrypoint
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
