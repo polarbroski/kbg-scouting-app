@@ -4,7 +4,9 @@
     <title>Scouting Report</title>
 </head>
 <body>
-    <h1>Generated Report</h1>
-    <img src="{{ url_for('static', filename='sample_reports/' + report_img) }}" alt="Scouting Report">
+    <h1>Scouting Report</h1>
+    <img src="{{ url_for('static', filename='sample_reports/' + report_img) }}" alt="Scouting Report" style="max-width: 100%; height: auto;">
+    <br>
+    <a href="{{ url_for('index') }}">Back to form</a>
 </body>
 </html>
